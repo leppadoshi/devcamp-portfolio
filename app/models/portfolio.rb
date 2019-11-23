@@ -1,5 +1,5 @@
 class Portfolio < ApplicationRecord
-	has_many :technologies
+	has_many :technologies, dependent: :destroy
 	accepts_nested_attributes_for :technologies, 
 									reject_if: lambda { |attrs| attrs['name'].blank? }
 
@@ -10,10 +10,10 @@ class Portfolio < ApplicationRecord
 	def self.angular
 		where(subtitle: 'Angular')
 	end
-
+#
 #option 2 (other)
 	scope :ruby_on_rails_portfolio_items, -> { where(subtitle: 'Ruby on Rails') }
-
+#
 	after_initialize :set_defaults
 
 	def set_defaults
