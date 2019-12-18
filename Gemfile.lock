@@ -119,6 +119,8 @@ GEM
     nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
+    petergate (2.0.1)
+      activerecord (> 4.0.0)
     pg (1.1.4)
     popper_js (1.14.5)
     pry (0.12.2)
@@ -128,7 +130,7 @@ GEM
       byebug (~> 11.0)
       pry (~> 0.10)
     puma (3.12.2)
-    rack (2.0.7)
+    rack (2.0.8)
     rack-proxy (0.6.5)
       rack
     rack-test (1.1.0)
@@ -234,6 +236,7 @@ DEPENDENCIES
   jquery-rails (~> 4.3, >= 4.3.5)
   listen (>= 3.0.5, < 3.2)
   mountain_view_tool!
+  petergate (~> 2.0, >= 2.0.1)
   pg (>= 0.18, < 2.0)
   pry-byebug (~> 3.7)
   puma (~> 3.12)
