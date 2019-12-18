@@ -53,3 +53,5 @@ gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'bootstrap', '~> 4.4.1'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
+
+gem 'mountain_view_tool', git: 'https://github.com/leppadoshi/mountain_view_tool'
