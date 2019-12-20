@@ -42,6 +42,7 @@ body {
 
 .cover-container {
   max-width: 55em;
+  text-align: center;
 }
 
 
@@ -99,14 +100,23 @@ body {
   font-weight: 700;
 }
 
-main {
-  text-align: center;
-}
-
 
 /*
  * Footer
  */
 .mastfoot {
   color: rgba(255, 255, 255, .5);
+}
+
+/*
+* Custom styles
+*/
+
+.card-body {
+  color: black;
+  text-align: left;
+}
+
+.auth_links a {
+  color: black;
 }
