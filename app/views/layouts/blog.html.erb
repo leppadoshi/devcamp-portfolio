@@ -21,6 +21,7 @@
       <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-4 pt-1">
+            <%= link_to 'Write A New Blog', new_blog_path if logged_in?(:site_admin) %>
           </div>
           <div class="col-4 text-center">
             <a class="blog-header-logo text-dark" href="#">Blogs</a>
@@ -37,6 +38,7 @@
 
     <main role="main" class="container">
       <div class="row">
+
 
     
     <%= yield %>
@@ -76,7 +78,7 @@
             </div>
           </aside>
           <!--Sidebar end-->
-
+        </div>
           <footer class="blog-footer">
             <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
             <p>
@@ -85,7 +87,6 @@
           </footer>
 
           <%= source_helper("blog") %>
-      </div>
     </main>
   </body>
 </html>
