@@ -112,6 +112,11 @@ body {
 * Custom styles
 */
 
+.background {
+  background-color: #333;
+  color: #fff;
+}
+
 .card-body {
   color: black;
   text-align: left;
@@ -123,6 +128,7 @@ body {
   margin: 0 auto;
   float: none;
   padding: 1%;
+  color: black;
 }
 
 .auth_links a {
@@ -131,4 +137,9 @@ body {
 
 .register-text {
   text-align: right;
+}
+
+.app-nav span {
+  margin-left: 15px;
+  margin-right: 15px;
 }
