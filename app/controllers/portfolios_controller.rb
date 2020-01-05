@@ -19,56 +19,58 @@ class PortfoliosController < ApplicationController
 	end
 
 	def create
-    	@portfolio_item = Portfolio.new(portfolio_params)
+  	@portfolio_item = Portfolio.new(portfolio_params)
 
-    	respond_to do |format|
-      		if @portfolio_item.save
-        		format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully created.' }
-      		else
-        		format.html { render :new }
-      		end
-    	end
+  	respond_to do |format|
+    		if @portfolio_item.save
+      		format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully created.' }
+    		else
+      		format.html { render :new }
+    		end
   	end
+	end
 
-  	def edit
+	def edit
+	end
+
+	def update
+
+  	respond_to do |format|
+    		if @portfolio_item.update(portfolio_params)
+      		format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully updated.' }
+    		else
+      		format.html { render :edit }
+    		end
   	end
+	end
 
-  	def update
+	def show
+	end
 
-    	respond_to do |format|
-      		if @portfolio_item.update(portfolio_params)
-        		format.html { redirect_to portfolios_path, notice: 'Portfolio item was successfully updated.' }
-      		else
-        		format.html { render :edit }
-      		end
-    	end
+	def destroy
+		#destroy/delete the record
+  	@portfolio_item.destroy
+
+  	# Redirect
+  	respond_to do |format|
+    		format.html { redirect_to portfolios_url, notice: 'Portfolio item was successfully destroyed.' }
   	end
+	end
 
-  	def show
-  	end
+  private
 
-  	def destroy
-  		#destroy/delete the record
-    	@portfolio_item.destroy
+  def portfolio_params
+    params.require(:portfolio).permit(:title, 
+                                      :subtitle, 
+                                      :body,
+                                      :main_image,
+                                      :thumb_image, 
+                                      technologies_attributes: [:id, :name]
+                                      )
+  end
 
-    	# Redirect
-    	respond_to do |format|
-      		format.html { redirect_to portfolios_url, notice: 'Portfolio item was successfully destroyed.' }
-    	end
-  	end
-
-    private
-
-    def portfolio_params
-      params.require(:portfolio).permit(:title, 
-                                        :subtitle, 
-                                        :body, 
-                                        technologies_attributes: [:id, :name]
-                                        )
-    end
-
-    def set_portfolio_item
-      @portfolio_item = Portfolio.find(params[:id])
-    end
+  def set_portfolio_item
+    @portfolio_item = Portfolio.find(params[:id])
+  end
 
 end

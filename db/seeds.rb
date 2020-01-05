@@ -27,32 +27,32 @@ end
 
 puts "5 skills created"
 
-8.times do |portfolio_item|
-	Portfolio.create!(
-		title: "Portfolio title: #{portfolio_item}",
-		subtitle: "Ruby on Rails",
-		body: "This opera is as lousy as it is brilliant! Your lyrics lack subtlety. That makes me feel angry!",
-		main_image: "https://place-hold.it/600x400/grey/black",
-		thumb_image: "https://place-hold.it/350x200/grey/black"
-		)
-end
+# 8.times do |portfolio_item|
+# 	Portfolio.create!(
+# 		title: "Portfolio title: #{portfolio_item}",
+# 		subtitle: "Ruby on Rails",
+# 		body: "This opera is as lousy as it is brilliant! Your lyrics lack subtlety. That makes me feel angry!",
+# 		main_image: "https://place-hold.it/600x400/grey/black",
+# 		thumb_image: "https://place-hold.it/350x200/grey/black"
+# 		)
+# end
 
-1.times do |portfolio_item|
-	Portfolio.create!(
-		title: "Portfolio title: #{portfolio_item}",
-		subtitle: "Angular",
-		body: "This opera is as lousy as it is brilliant! Your lyrics lack subtlety. That makes me feel angry!",
-		main_image: "https://place-hold.it/600x400/grey/black",
-		thumb_image: "https://place-hold.it/350x200/grey/black"
-		)
-end
+# 1.times do |portfolio_item|
+# 	Portfolio.create!(
+# 		title: "Portfolio title: #{portfolio_item}",
+# 		subtitle: "Angular",
+# 		body: "This opera is as lousy as it is brilliant! Your lyrics lack subtlety. That makes me feel angry!",
+# 		main_image: "https://place-hold.it/600x400/grey/black",
+# 		thumb_image: "https://place-hold.it/350x200/grey/black"
+# 		)
+# end
 
-puts "9 portfolio items created"
+# puts "9 portfolio items created"
 
-3.times do |technology|
-	Portfolio.last.technologies.create!(
-		name: "Technology #{technology}"
-		)
-end
+# 3.times do |technology|
+# 	Portfolio.last.technologies.create!(
+# 		name: "Technology #{technology}"
+# 		)
+# end
 
-puts "3 technologies are created"
+# puts "3 technologies are created"
